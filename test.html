@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST 쇼핑몰</title>
+    <link rel="stylesheet" href="./css/test.css">
+    <script src="./script/jquery-1.12.4.js"></script>
+    <script src="./script/common.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">
+                <img src="./images/logo.png" alt="로고">
+            </div>
+            <ul class="gnb">
+                <li>
+                    <a href="#">탑</a>
+                    <ul>
+                        <li><a href="#">블라우스</a></li>
+                        <li><a href="#">티</a></li>
+                        <li><a href="#">셔츠</a></li>
+                        <li><a href="#">니트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">아우터</a>
+                    <ul>
+                        <li><a href="#">자켓</a></li>
+                        <li><a href="#">코트</a></li>
+                        <li><a href="#">가디건</a></li>
+                        <li><a href="#">머플러</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">팬츠</a>
+                    <ul>
+                        <li><a href="#">청바지</a></li>
+                        <li><a href="#">짧은바지</a></li>
+                        <li><a href="#">긴바지</a></li>
+                        <li><a href="#">레깅스</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">악세서리</a>
+                    <ul>
+                        <li><a href="#">귀고리</a></li>
+                        <li><a href="#">목걸이</a></li>
+                        <li><a href="#">반지</a></li>
+                        <li><a href="#">팔찌</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="slider">
+            <div class="slide">
+                <div>
+                    <a href="#"><img src="./images/slide1.jpg" alt="슬라이드1"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="./images/slide2.jpg" alt="슬라이드1"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="./images/slide3.jpg" alt="슬라이드1"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="items">
+            <div class="tab">
+                <div class="tab_btns">
+                    <h2 class="on">공지사항</h2>
+                    <h2>갤러리</h2>
+                </div>
+                <div class="tab_item">
+                    <ul class="notice">
+                        <li><a href="#"><b>></b> css부터 빨리 마스터 해야 할텐데 쉽지가 않네. 시험전까지 열심히 하자</a></li>
+                        <li><a href="#"><b>></b>무슨 말이든 쓸 수 있는 공간 맞죠?</a></li>
+                        <li><a href="#"><b>></b>연습만이 살길이다.</a></li>
+                        <li><a href="#"><b>></b>이걸 굳이 클릭 안해도 됩니다. 클릭 클릭 클릭 클릭!</a></li>
+                    </ul>
+                    <ul class="gallery">
+                        <li><a href="#"><img src="./images/gallery1.jpg" alt="갤러리이미지1"></a></li>
+                        <li><a href="#"><img src="./images/gallery2.jpg" alt="갤러리이미지2"></a></li>
+                        <li><a href="#"><img src="./images/gallery3.jpg" alt="갤러리이미지3"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="banner">
+                <a href="#"><img src="./images/banner.jpg" alt=""></a>
+            </div>
+
+            <div class="link">
+                <ul>
+                    <li><a href="#">이거 클릭</a></li>
+                    <li><a href="#">이것도!</a></li>
+                    <li><a href="#">여기도!</a></li>
+                    <li><a href="#">저기도!</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="footer">
+            <div class="f_logo"><img src="./images/logo-footer.png" alt=""></div>
+            <p>copy right. 헛소리.corp</p>
+            <div class="sns">
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+                <a href="#">youtube</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal">
+        <div class="modal_box">
+            <h3>아무말 대잔치</h3>
+            <p>이걸 깜빡 할 뻔 했습니다. 그러면 안됐었는데 이거 길게 쓰는거 일일이 적는 제가 참 바보 같다고 느낍니다. 인터넷으로 긁어 오면 될 걸.. 뭐하러 이런 사서 고생을 하는지 모르겠지만 이미 한번 시작한거 계속 쳐 봅니다. 오늘은 애국가 2절을 써 보겠습니다. 남산위의 저 소나무 철값을 두른듯 바람 서리 불변함은 우리 기상 일세 무궁화 삼천리 화려 강산 대한사람 대한으로 길이 보전하세</p>
+            <div class="close"><a href="#">닫기</a></div>
+        </div>
+    </div>
+
+    <script>
+        //메뉴
+        $('.gnb > li').hover(
+            function(){
+                // $('.gnb ul').stop().fadeIn('fast')
+                $(this).find('ul').stop().fadeIn('fast')
+            },
+            function(){
+                // $('.gnb ul').hide()
+                $(this).find('ul').stop().hide()
+            }
+        )
+        //모달
+        $('.notice li:first').click(
+            function(){
+                $('.modal').show()
+            }
+        )
+        $('.close').click(
+            function(){
+                $('.modal').hide()
+            }
+        )
+        // //슬라이드
+        setInterval(function(){
+            $('.slide').animate({top: -300},function(){
+                $('.slide div:first').appendTo('.slide')
+                $('.slide').css('top',0)
+            })
+        }, 3000)
+        
+
+    </script>
+
+    
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUST 쇼핑몰</title>
-    <link rel="stylesheet" href="./css/a.css">
+    <link rel="stylesheet" href="./css/b.css">
     <script src="./script/jquery-1.12.4.js"></script>
     <script src="./script/common.js"></script>
 </head>
@@ -66,12 +66,14 @@
         //메뉴
         $('.gnb').hover(
             function(){
-                $('.gnb ul').stop().fadeIn('fast')
-                // $('.gnb ul').stop().slideDown('fast')
+                $('.gnb ul').stop().slideDown()
+                // $('.gnb ul').stop().fadeIn('fast')
+                $('.gnb').addClass('active')
             },
             function(){
-                $('.gnb ul').stop().fadeOut('fast')
-                // $('.gnb ul').stop().slideUp('fast')
+                $('.gnb ul').stop().slideUp('fast')
+                $('.gnb').removeClass('active')
+                // $('.gnb ul').stop().fadeOut('fast')
             }
         )
         
